@@ -1,0 +1,12 @@
+Comments are a luxury and time-consuming.
+
+When one painstakingly follow instructions but these are inconsistent, the whole code needs to be revised.
+
+When creating 'Adder' class we are told to do it with overloaded 2 or 3 parameters
+
+"... constructor that will receive two parameters ... num1 & num2. ...Create another constructor that will receive three parameters. This constructor will take the three parameters and assign them to the variables; num1, num2, & num3...".
+
+Later on, when asked to create an instance of the 'Adder' class we are asked for FOUR PARAMETERS. This is where and why I stopped.
+
+
+
