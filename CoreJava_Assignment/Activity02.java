@@ -132,13 +132,13 @@ public class Activity02
 			if(answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes"))
 			{
 				System.out.print("\nWelcome back!");
-				new Activity02(coor);
-			}
+				new Activity02(coor);			// creates a new instance of class with overloaded constructor
+			}						// that passes last values of x ad y in an integer type array
 			else if(answer.equalsIgnoreCase("n") || answer.equalsIgnoreCase("no"))
 			{
 				System.out.println("\nProgram is exiting... Good-bye!");
 				System.out.println("\t\t\t\tFINAL OUTPUT: " + coor[0] +" "+ coor[1]);
-				System.exit(0);
+				System.exit(0);				// exits program
 			}	
 			else
 			{
