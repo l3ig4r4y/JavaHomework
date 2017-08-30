@@ -11,6 +11,7 @@ class Activity01
 	static int [] arr = new int[n];
 	static int index = 0;
 	static int element = 0;
+	
 	Activity01()
 	{
 		//brief description of the program
@@ -33,10 +34,11 @@ class Activity01
 		int arrlength = sc.nextInt();
 		return arrlength;
 	}
+	
 	//this method takes the length of an array provided by the user to create the array using FOR LOOP
 	// and asks user to manually enter the values for each element of the array
 	// finally the array is returned in the form of int[] array
-	static int[] 	setArrayElements(int n)
+	static int[] 		setArrayElements(int n)
 	{
 		int[] arr = new int[n]; //initializes array and length based on previous method
 		for (int i = 0; i < arr.length; i++) 
@@ -47,6 +49,7 @@ class Activity01
 		}
 		return arr; //returns array with values provided by user
 	}
+	
 	//this method ask user to enter the index of the element he/she wishes to pull from the array
 	static int 		getIndex()
 	{
@@ -56,6 +59,7 @@ class Activity01
 		//stores user input
 		return index;
 	}
+	
 	//this method prints the array element as per the provided index or informs the user that such
 	//index goes over the length of the array, making it "out of range"
 	static int 		getElementByIndex(int[] arr, int index)
