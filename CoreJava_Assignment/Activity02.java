@@ -13,7 +13,7 @@ public class Activity02
 	static int    	commandsLength 		= 0;			// length of commands string
 	static BufferedReader 	bf 		= null;			// reader declared, bufferedreader type
 	private int 	x, y;						// values of coordinates, integer type
-	static  int []	coor 			= new int[2];		// values of coordinates to be, integer array type
+	static  int []	coor 			= new int[2];		// values of coordinates to be, integer array type, with size 2 for x and y values
 	boolean repeat				= false;		// boolean value to help add more commands later on
 	
 	Activity02()//constructor
@@ -52,8 +52,8 @@ public class Activity02
 				
 				int spaceWithouSpaces = 0;
 				for(int i=0; i<commands.length(); i++)
-				{
-					if	(	
+				{					// if it is not letter: d,r,u,l or space throw exception
+					if	(			
 							!(	commands.charAt(i)=='d' || commands.charAt(i)=='u' ||
 								commands.charAt(i)=='l' || commands.charAt(i)=='r' ||
 								commands.charAt(i)=='D' || commands.charAt(i)=='U' ||
@@ -69,13 +69,13 @@ public class Activity02
 					
 					if	(commands.charAt(i)!=' ')
 					{
-						spaceWithouSpaces++;
+						spaceWithouSpaces++;	// through the loop it counts the commands without spaces
 					}
 				}
 				
-				if(spaceWithouSpaces>10)
+				if(spaceWithouSpaces>10)		// if commands go over 10, throw exception
 				{
-							throw new ArrayIndexOutOfBoundsException();
+					throw new ArrayIndexOutOfBoundsException();
 				}
 			} 
 			catch (ArrayIndexOutOfBoundsException e) 
@@ -83,13 +83,12 @@ public class Activity02
 				System.out.println("I will not make it that far! (Please limit your orders to 10 at a time)");
 				getCommands();
 			} 
-			catch (Exception e) 
+			catch (Exception e) 				// custom exception for not being the right letter (command)
 			{
 				System.out.print("Not the right command format! (Only R,L,D and U are admisible)\n");
 				getCommands();
 			} 
-
-			
+	
 		return commands;
 	}
 	
@@ -101,23 +100,23 @@ public class Activity02
 		{
 			if(orders.charAt(i)=='U' || orders.charAt(i)=='u')
 			{
-				y++;
+				y++;					// add 	    1 to Y if UP
 			}
 			if(orders.charAt(i)=='D' || orders.charAt(i)=='d')
 			{
-				y--;
+				y--;					// subtract 1 to Y if DOWN
 			}
 			if(orders.charAt(i)=='R' || orders.charAt(i)=='r')
 			{
-				x++;
+				x++;					// add 	    1 to X if RIGHT
 			}
 			if(orders.charAt(i)=='L' || orders.charAt(i)=='l')
 			{
-				x--;
+				x--;					// subtract 1 to X if LEFT
 			}
 		}
 		
-		coor[0] = x; coor[1]=y;
+		coor[0] = x; coor[1]=y;					// populates array with x and y values	
 		System.out.println("\nOUTPUT: "+ coor[0] + " " + coor[1]);
 		return coor;
 	}
@@ -149,7 +148,7 @@ public class Activity02
 		catch (IllegalArgumentException e) 
 		{
 			System.out.println("Invalid answer! Type Y to continue and N to exit program.");
-			isContinue();
+			isContinue();					// isContinue method recursion to re-retrieve commands
 		}
 		catch (IOException e) 
 		{
