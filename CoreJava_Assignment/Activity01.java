@@ -27,6 +27,8 @@ class Activity01
 		index = getIndex();						// element index retrieved by user
 		element = getElementByIndex(arr,index);	// element selected by index printed unless exception caught
 	}
+	
+	
 	//this method asks user to enter length or array and returns that number using SCANNER(SYSTEM.IN)
 	static int 		getArrayLength()
 	{		
@@ -34,6 +36,7 @@ class Activity01
 		int arrlength = sc.nextInt();
 		return arrlength;
 	}
+	
 	
 	//this method takes the length of an array provided by the user to create the array using FOR LOOP
 	// and asks user to manually enter the values for each element of the array
@@ -50,6 +53,7 @@ class Activity01
 		return arr; //returns array with values provided by user
 	}
 	
+	
 	//this method ask user to enter the index of the element he/she wishes to pull from the array
 	static int 		getIndex()
 	{
@@ -59,6 +63,7 @@ class Activity01
 		//stores user input
 		return index;
 	}
+	
 	
 	//this method prints the array element as per the provided index or informs the user that such
 	//index goes over the length of the array, making it "out of range"
@@ -79,8 +84,10 @@ class Activity01
 		return 0;
 	}
 	
+	
 	public static void main(String[] args) 
 	{
 		Activity01 demo = new Activity01();//instance of Activity01 class created in main class
 	}
+	
 }
