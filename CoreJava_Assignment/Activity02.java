@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class Activity02 
 {
 	static String 	commands 		= ""; 			// commands in string to be filled by user
-	static int    	commandsLength 	= 0;			// length of commands string
+	static int    	commandsLength 		= 0;			// length of commands string
 	static BufferedReader 	bf 		= null;			// reader declared, bufferedreader type
-	private int 	x, y;							// values of coordinates, integer type
-	static  int []	coor 			= new int[2];	// values of coordinates to be, integer array type
-	boolean repeat					= false;		// boolean value to help add more commands later on
+	private int 	x, y;						// values of coordinates, integer type
+	static  int []	coor 			= new int[2];		// values of coordinates to be, integer array type
+	boolean repeat				= false;		// boolean value to help add more commands later on
 	
 	Activity02()//constructor
 	{
@@ -23,20 +23,20 @@ public class Activity02
 		(
 				"This program allows you to give up to 10 commands to Optimus Prime\n"+
 				"and print its new coordinates"
-		);											// brief description of the program
-		commands = getCommands();					// commands retrieved from user in string form
+		);							// brief description of the program
+		commands = getCommands();				// commands retrieved from user in string form
 		coor = getCoordinates(commands);			// calculates coordinates based on previous input
-		isContinue();								// asks user whether he wants to add more commands or exit program
+		isContinue();						// asks user whether he wants to add more commands or exit program
 	}
 	
-	Activity02(int[] xy) 							// overloaded constructor that passes an array,
-	{												// in this case the coordinates values(x,y).
+	Activity02(int[] xy) 						// overloaded constructor that passes an array,
+	{								// in this case the coordinates values(x,y).
 		this.x = xy[0];
 		this.y = xy[1];
-		commands = getCommands();					// same as previous constructor except that 
+		commands = getCommands();				// same as previous constructor except that 
 		coor = getCoordinates(commands);			// it takes last coordinates as a starting point(x,y)
-		isContinue();								// thus adding to the last values instead of
-	}												// starting from scratch (0,0).
+		isContinue();						// thus adding to the last values instead of
+	}								// starting from scratch (0,0).
 	
 	//	this method uses BufferedReader to read user input (commands) and validates it in terms of
 	// 	length and "right type: only R,L,U,D letters with try-catch and outofbound exception
@@ -159,7 +159,7 @@ public class Activity02
 	
 	public static void main(String[] args) 
 	{	
-		new Activity02(); //an instance of the Activity02 class runs in main
-		 
+		new Activity02(); 					//an instance of the Activity02 class runs in main	 
 	}
+	
 }
