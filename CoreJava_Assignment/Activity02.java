@@ -9,12 +9,12 @@ import java.util.Scanner;
 
 public class Activity02 
 {
-	static String 	commands 		= ""; 			// commands in string to be filled by user
-	static int    	commandsLength 		= 0;			// length of commands string
+	static String 		commands 	= ""; 			// commands in string to be filled by user
+	static int    		commandsLength 	= 0;			// length of commands string
 	static BufferedReader 	bf 		= null;			// reader declared, bufferedreader type
-	private int 	x, y;						// values of coordinates, integer type
-	static  int []	coor 			= new int[2];		// values of coordinates to be, integer array type, with size 2 for x and y values
-	boolean repeat				= false;		// boolean value to help add more commands later on
+	private int 		x, y;					// values of coordinates, integer type
+	static  int []		coor 		= new int[2];		// values of coordinates to be, integer array type, with size 2 for x and y values
+	boolean 		repeat		= false;		// boolean value to help add more commands later on
 	
 	Activity02()//constructor
 	{
